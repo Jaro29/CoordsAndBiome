@@ -9,7 +9,6 @@ import com.hypixel.hytale.server.core.command.system.basecommands.AbstractComman
  * - /coo help - Show available commands
  * - /coo info - Show plugin information
  * - /coo reload - Reload plugin configuration
- * - /coo ui - Open the plugin dashboard
  */
 public class CoordsAndBiomePluginCommand extends AbstractCommandCollection {
 
@@ -20,7 +19,6 @@ public class CoordsAndBiomePluginCommand extends AbstractCommandCollection {
         this.addSubCommand(new HelpSubCommand());
         this.addSubCommand(new InfoSubCommand());
         this.addSubCommand(new ReloadSubCommand());
-        this.addSubCommand(new UISubCommand());
     }
 
     @Override
