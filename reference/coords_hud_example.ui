@@ -1,0 +1,14 @@
+// Przykładowy plik UI dla HUD z koordynatami i biomem
+// Docelowa ścieżka: Common/UI/Custom/coordsandbiome/coords_hud.ui
+//
+// CustomUIHud.build() wywołuje: commandBuilder.append("Common/UI/Custom/coordsandbiome/coords_hud.ui")
+// Aktualizacja: commandBuilder.set("#CoordsLabel.TextSpans", Message.raw("Pozycja: X, Y, Z | Biom: [Nazwa]"))
+
+$C = "../Common.ui";
+
+// HUD – Label nad hotbarem (Anchor Bottom: 100)
+Label #CoordsLabel {
+  Text: "Pozycja: 0, 0, 0 | Biom: —";
+  Anchor: (Bottom: 100, Width: 400, Height: 24);
+  Style: (FontSize: 14, TextColor: #ffffff, HorizontalAlignment: Center);
+}

@@ -1,0 +1,10 @@
+{
+  "Group": "com.jaro",
+  "Name": "CoordsAndBiome",
+  "Version": "1.0.0",
+  "Description": "A Hytale server mod",
+  "Authors": [{"Name": "jaro"}],
+  "Main": "com.jaro.coordsandbiome.CoordsAndBiomePlugin",
+  "LoadOrder": "POSTWORLD",
+  "IncludesAssetPack": true
+}
