@@ -27,6 +27,7 @@ public class CoordsAndBiomePlugin extends JavaPlugin {
 
     /**
      * Get the plugin instance.
+     * 
      * @return The plugin instance
      */
     public static CoordsAndBiomePlugin getInstance() {
@@ -43,7 +44,7 @@ public class CoordsAndBiomePlugin extends JavaPlugin {
         // Register event listeners
         registerListeners();
 
-        // Register ECS system for coords/biome HUD (tick co 0.5s)
+        // Register ECS system for coords/biome HUD (tick every 0.5s)
         getEntityStoreRegistry().registerSystem(new CoordsHudTickingSystem());
 
         LOGGER.at(Level.INFO).log("[CoordsAndBiome] Setup complete!");

@@ -23,7 +23,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 /**
- * System aktualizujący HUD z koordynatami i biomem co 0.5 sekundy.
+ * System updating the coordinates and biome HUD every 0.5 seconds.
  */
 public class CoordsHudTickingSystem extends DelayedEntitySystem<EntityStore> {
 
@@ -39,14 +39,14 @@ public class CoordsHudTickingSystem extends DelayedEntitySystem<EntityStore> {
             int index,
             @Nonnull ArchetypeChunk<EntityStore> archetypeChunk,
             @Nonnull Store<EntityStore> store,
-            @Nonnull CommandBuffer<EntityStore> commandBuffer
-    ) {
+            @Nonnull CommandBuffer<EntityStore> commandBuffer) {
         World world = store.getExternalData().getWorld();
         IWorldGen worldGen = world.getChunkStore().getGenerator();
 
         Player playerComponent = archetypeChunk.getComponent(index, Player.getComponentType());
         PlayerRef playerRef = archetypeChunk.getComponent(index, PlayerRef.getComponentType());
-        TransformComponent transformComponent = archetypeChunk.getComponent(index, TransformComponent.getComponentType());
+        TransformComponent transformComponent = archetypeChunk.getComponent(index,
+                TransformComponent.getComponentType());
 
         if (playerComponent == null || playerRef == null || transformComponent == null) {
             return;
@@ -67,7 +67,7 @@ public class CoordsHudTickingSystem extends DelayedEntitySystem<EntityStore> {
             }
         }
 
-        String text = String.format("Pozycja: %d, %d, %d | Biom: %s", x, y, z, biomeName);
+        String text = String.format("Position: %d, %d, %d | Biome: %s", x, y, z, biomeName);
 
         HudManager hudManager = playerComponent.getHudManager();
         CustomUIHud customHud = hudManager.getCustomHud();
@@ -89,7 +89,6 @@ public class CoordsHudTickingSystem extends DelayedEntitySystem<EntityStore> {
         return Archetype.of(
                 Player.getComponentType(),
                 PlayerRef.getComponentType(),
-                TransformComponent.getComponentType()
-        );
+                TransformComponent.getComponentType());
     }
 }

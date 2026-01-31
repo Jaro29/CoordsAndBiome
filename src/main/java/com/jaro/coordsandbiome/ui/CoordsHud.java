@@ -8,7 +8,7 @@ import com.hypixel.hytale.server.core.universe.PlayerRef;
 import javax.annotation.Nonnull;
 
 /**
- * HUD wyświetlający koordynaty i biom gracza nad hotbarem.
+ * HUD displaying player coordinates and biome above the hotbar.
  */
 public class CoordsHud extends CustomUIHud {
 
@@ -24,7 +24,7 @@ public class CoordsHud extends CustomUIHud {
     }
 
     /**
-     * Aktualizuje tekst wyświetlany na HUD.
+     * Updates the text displayed on the HUD.
      */
     public void updateInfo(@Nonnull String text) {
         UICommandBuilder commandBuilder = new UICommandBuilder();

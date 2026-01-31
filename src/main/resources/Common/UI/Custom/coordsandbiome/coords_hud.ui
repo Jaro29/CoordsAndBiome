@@ -1,8 +1,8 @@
-// CoordsAndBiome HUD - koordynaty i biom nad hotbarem
+// CoordsAndBiome HUD - coordinates and biome above the hotbar
 $C = "../Common.ui";
 
 Label #CoordsLabel {
-  Text: "Pozycja: 0, 0, 0 | Biom: —";
+  Text: "Position: 0, 0, 0 | Biome —";
   Anchor: (Bottom: 150, Width: 400, Height: 24);
   Style: (FontSize: 14, TextColor: #ffffff, HorizontalAlignment: Center);
 }
