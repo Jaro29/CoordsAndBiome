@@ -6,4 +6,6 @@ target/
 *.log
 .DS_Store
 libs/HytaleServer.jar
+reference/
+
 
