@@ -47,6 +47,9 @@ public class CoordsAndBiomePlugin extends JavaPlugin {
         // Register ECS system for coords/biome HUD (tick every 0.5s)
         getEntityStoreRegistry().registerSystem(new CoordsHudTickingSystem());
 
+        // Register Marker Distance System (tick every 0.2s)
+        getEntityStoreRegistry().registerSystem(new com.jaro.coordsandbiome.systems.MarkerDistanceSystem());
+
         LOGGER.at(Level.INFO).log("[CoordsAndBiome] Setup complete!");
     }
 
